@@ -1,0 +1,681 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.40194/W32 for 8051         05/Oct/2015  14:11:32 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\Users\123\Desktop\Texas                         #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\Source\my_function.c       #
+#    Command line       =  -f "D:\Users\123\Desktop\Texas                     #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\Tools\CC #
+#                          2530DB\f8wCoord.cfg" (-DCPU32MHZ                   #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f "D:\Users\123\Desktop\Texas                     #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\Tools\CC #
+#                          2530DB\f8wConfig.cfg" (-DZIGBEEPRO -DSECURE=0      #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 "D:\Users\123\Desktop\Texas #
+#                           Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\ #
+#                          Samples\SampleApp - 副本\Source\my_function.c" -D  #
+#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
+#                          -D LCD_SUPPORTED=DEBUG -lC                         #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\CoordinatorEB\Lis #
+#                          t\" -lA "D:\Users\123\Desktop\Texas                #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\CoordinatorEB\Lis #
+#                          t\" --diag_suppress Pe001,Pa010 -o                 #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\CoordinatorEB\Obj #
+#                          \" -e --no_code_motion --debug --core=plain        #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I "D:\Users\123\Desktop\Texa #
+#                          s Instruments\ZStack-CC2530-2.5.1a\Projects\zstack #
+#                          \Samples\SampleApp - 副本\CC2530DB\" -I            #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\Source\" -I    #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\ZMain\TI #
+#                          2530DB\" -I "D:\Users\123\Desktop\Texas            #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\hal\include\" -I                          #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\hal\target\CC2530EB\" -I                  #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\mac\include\" -I                          #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\mac\high_level\" -I                       #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\mac\low_level\srf04\" -I                  #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\mac\low_level\srf04\single_chip\" -I      #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\mt\" -I "D:\Users\123\Desktop\Texas       #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\osal\include\" -I                         #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\services\saddr\" -I                       #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\services\sdata\" -I                       #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\stack\af\" -I "D:\Users\123\Desktop\Texas #
+#                           Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\ #
+#                          Samples\SampleApp - 副本\CC2530DB\..\..\..\..\..\C #
+#                          omponents\stack\nwk\" -I                           #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\stack\sapi\" -I                           #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\stack\sec\" -I "D:\Users\123\Desktop\Texa #
+#                          s Instruments\ZStack-CC2530-2.5.1a\Projects\zstack #
+#                          \Samples\SampleApp - 副本\CC2530DB\..\..\..\..\..\ #
+#                          Components\stack\sys\" -I                          #
+#                          "D:\Users\123\Desktop\Texas                        #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\stack\zdo\" -I "D:\Users\123\Desktop\Texa #
+#                          s Instruments\ZStack-CC2530-2.5.1a\Projects\zstack #
+#                          \Samples\SampleApp - 副本\CC2530DB\..\..\..\..\..\ #
+#                          Components\zmac\" -I "D:\Users\123\Desktop\Texas   #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\zmac\f8w\" -Ohz --require_prototypes      #
+#    List file          =  D:\Users\123\Desktop\Texas                         #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\CoordinatorEB\Lis #
+#                          t\my_function.lst                                  #
+#    Object file        =  D:\Users\123\Desktop\Texas                         #
+#                          Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\S #
+#                          amples\SampleApp - 副本\CC2530DB\CoordinatorEB\Obj #
+#                          \my_function.r51                                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\Users\123\Desktop\Texas Instruments\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp - 副本\Source\my_function.c
+      1          /*串口*/
+      2          #include "MT_UART.h"
+      3          #include "MT.h"
+      4          #include "my_function.h"
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \   uint16 f
+   \                     f:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+   \   uint8 conversion[3]
+   \                     conversion:
+   \   000000                DS 3
+   \   000003                REQUIRE `?<Initializer for conversion>`
+   \   000003                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+   \   uint8 State_data[3]
+   \                     State_data:
+   \   000000                DS 3
+   \   000003                REQUIRE `?<Initializer for State_data>`
+   \   000003                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \   uint8 Absence_times[3]
+   \                     Absence_times:
+   \   000000                DS 3
+   \   000003                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+   \   uint8 IgnoreDevice[3]
+   \                     IgnoreDevice:
+   \   000000                DS 3
+   \   000003                REQUIRE `?<Initializer for IgnoreDevice>`
+   \   000003                REQUIRE __INIT_XDATA_I
+      5          #include <stdlib.h>
+      6          /**************************变量声明************************************/
+      7          //extern uint8 Absence_times[3];//={0,0,0};
+      8          //uint8 State_data[3]={'0','0','0'};//林山定义了一个状态数组，用于记录各个端点的在线状态，目前先假设有3个端点。
+      9          /**************************函数声明************************************/
+     10          //void Absence_check(uint8 x);//狗清定义的节点缺席检测函数,有x次签到不到就报警。
+     11          //void BT2Z_transmit(uint8 *group);//狗清定义的蓝牙到zigbee信息搬运函数
+     12          /**************************函数描述************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     13          void Absence_check(uint8 x)
+   \                     Absence_check:
+     14          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+     15            uint8 i;
+     16            //char string[3];
+     17            for(i=0;i<3;i++)
+   \   000007   7F00         MOV     R7,#0x0
+     18            {
+     19              if (State_data[i]=='0')
+   \                     ??Absence_check_0:
+   \   000009   8F..         MOV     ?V0 + 0,R7
+   \   00000B   74..         MOV     A,#State_data & 0xff
+   \   00000D   25..         ADD     A,?V0 + 0
+   \   00000F   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_15:
+   \   000012   E0           MOVX    A,@DPTR
+   \   000013   6430         XRL     A,#0x30
+   \   000015   7006         JNZ     ??Absence_check_1
+     20              {
+     21                 Absence_times[i]++;
+   \   000017   12....       LCALL   ?Subroutine2 & 0xFFFF
+     22              }
+   \                     ??CrossCallReturnLabel_2:
+   \   00001A   04           INC     A
+   \   00001B   801D         SJMP    ??Absence_check_2
+     23              if (State_data[i]=='1')
+   \                     ??Absence_check_1:
+   \   00001D   E0           MOVX    A,@DPTR
+   \   00001E   6431         XRL     A,#0x31
+   \   000020   7019         JNZ     ??Absence_check_3
+     24              {
+     25                Absence_times[i]=0;
+   \   000022   8F82         MOV     DPL,R7
+   \   000024   A882         MOV     R0,DPL
+   \   000026   74..         MOV     A,#Absence_times & 0xff
+   \   000028   28           ADD     A,R0
+   \   000029   F582         MOV     DPL,A
+   \   00002B   74..         MOV     A,#(Absence_times >> 8) & 0xff
+   \   00002D   12....       LCALL   ??Subroutine7_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   000030   E4           CLR     A
+   \   000031   F0           MOVX    @DPTR,A
+     26                State_data[i]='0';
+   \   000032   74..         MOV     A,#State_data & 0xff
+   \   000034   28           ADD     A,R0
+   \   000035   12....       LCALL   ?Subroutine5 & 0xFFFF
+     27              }
+   \                     ??CrossCallReturnLabel_16:
+   \   000038   7430         MOV     A,#0x30
+   \                     ??Absence_check_2:
+   \   00003A   F0           MOVX    @DPTR,A
+     28              if((Absence_times[i]>=x) && (IgnoreDevice[i]=='0'))
+   \                     ??Absence_check_3:
+   \   00003B   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   00003E   C3           CLR     C
+   \   00003F   9E           SUBB    A,R6
+   \   000040   4035         JC      ??Absence_check_4
+   \   000042   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   000045   E0           MOVX    A,@DPTR
+   \   000046   6430         XRL     A,#0x30
+   \   000048   702D         JNZ     ??Absence_check_4
+     29              {
+     30                //itoa(i,string,10);
+     31                HalUARTWrite(0, "device ",7);
+   \   00004A                ; Setup parameters for call to function HalUARTWrite
+   \   00004A   7C07         MOV     R4,#0x7
+   \   00004C   7D00         MOV     R5,#0x0
+   \   00004E   7A..         MOV     R2,#`?<Constant "device ">` & 0xff
+   \   000050   7B..         MOV     R3,#(`?<Constant "device ">` >> 8) & 0xff
+   \   000052   7900         MOV     R1,#0x0
+   \   000054   12....       LCALL   ??HalUARTWrite?relay
+     32                HalUARTWrite(0,&conversion[i],1);
+   \   000057                ; Setup parameters for call to function HalUARTWrite
+   \   000057   7C01         MOV     R4,#0x1
+   \   000059   7D00         MOV     R5,#0x0
+   \   00005B   74..         MOV     A,#conversion & 0xff
+   \   00005D   25..         ADD     A,?V0 + 0
+   \   00005F   FA           MOV     R2,A
+   \   000060   74..         MOV     A,#(conversion >> 8) & 0xff
+   \   000062   3400         ADDC    A,#0x0
+   \   000064   FB           MOV     R3,A
+   \   000065   7900         MOV     R1,#0x0
+   \   000067   12....       LCALL   ??HalUARTWrite?relay
+     33                HalUARTWrite(0, " is offline\n",12);//warning!!
+   \   00006A                ; Setup parameters for call to function HalUARTWrite
+   \   00006A   7C0C         MOV     R4,#0xc
+   \   00006C   7D00         MOV     R5,#0x0
+   \   00006E   7A..         MOV     R2,#`?<Constant " is offline\\n">` & 0xff
+   \   000070   7B..         MOV     R3,#(`?<Constant " is offline\\n">` >> 8) & 0xff
+   \   000072   7900         MOV     R1,#0x0
+   \   000074   12....       LCALL   ??HalUARTWrite?relay
+     34              }
+     35            }
+   \                     ??Absence_check_4:
+   \   000077   0F           INC     R7
+   \   000078   EF           MOV     A,R7
+   \   000079   C3           CLR     C
+   \   00007A   9403         SUBB    A,#0x3
+   \   00007C   408B         JC      ??Absence_check_0
+     36          }
+   \   00007E                REQUIRE ?Subroutine0
+   \   00007E                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   74..         MOV     A,#Absence_times & 0xff
+   \   000002   25..         ADD     A,?V0 + 0
+   \   000004   F582         MOV     DPL,A
+   \   000006   74..         MOV     A,#(Absence_times >> 8) & 0xff
+   \   000008   12....       LCALL   ??Subroutine7_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_13:
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   74..         MOV     A,#IgnoreDevice & 0xff
+   \   000002   25..         ADD     A,?V0 + 0
+   \   000004   F582         MOV     DPL,A
+   \   000006   74..         MOV     A,#(IgnoreDevice >> 8) & 0xff
+   \   000008   12....       LCALL   ??Subroutine7_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_14:
+   \   00000B   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   F582         MOV     DPL,A
+   \   000002   74..         MOV     A,#(State_data >> 8) & 0xff
+   \   000004                REQUIRE ??Subroutine7_0
+   \   000004                ; // Fall through to label ??Subroutine7_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine7_0:
+   \   000000   3400         ADDC    A,#0x0
+   \   000002   F583         MOV     DPH,A
+   \   000004   22           RET
+     37          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     38          void NeverDect(uint8 DeviceID)
+   \                     NeverDect:
+     39          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     40            IgnoreDevice[DeviceID]='1';
+   \   000005   89..         MOV     ?V0 + 0,R1
+   \   000007   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   00000A   7431         MOV     A,#0x31
+   \   00000C   F0           MOVX    @DPTR,A
+     41          }
+   \   00000D   80..         SJMP    ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     42          void SerialCMD(mtOSALSerialData_t *cmdMsg)
+   \                     SerialCMD:
+     43          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 2
+   \   000005   74FE         MOV     A,#-0x2
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   EA           MOV     A,R2
+   \   00000B   FE           MOV     R6,A
+   \   00000C   EB           MOV     A,R3
+   \   00000D   FF           MOV     R7,A
+     44            switch(cmdMsg->msg[0])
+   \   00000E   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   24D0         ADD     A,#-0x30
+   \   000014   6009         JZ      ??SerialCMD_0
+   \   000016   14           DEC     A
+   \   000017   6024         JZ      ??SerialCMD_1
+   \   000019   14           DEC     A
+   \   00001A   603A         JZ      ??SerialCMD_2
+   \   00001C   02....       LJMP    ??SerialCMD_3 & 0xFFFF
+     45            {
+     46              case IgnoreEvent:
+     47                HalUARTWrite(0,"get event1\n",12);
+   \                     ??SerialCMD_0:
+   \   00001F                ; Setup parameters for call to function HalUARTWrite
+   \   00001F   7C0C         MOV     R4,#0xc
+   \   000021   7D00         MOV     R5,#0x0
+   \   000023   7A..         MOV     R2,#`?<Constant "get event1\\n">` & 0xff
+   \   000025   7B..         MOV     R3,#(`?<Constant "get event1\\n">` >> 8) & 0xff
+   \   000027   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   00002A   24D0         ADD     A,#-0x30
+   \   00002C   F8           MOV     R0,A
+   \   00002D   74..         MOV     A,#IgnoreDevice & 0xff
+   \   00002F   28           ADD     A,R0
+   \   000030   F582         MOV     DPL,A
+   \   000032   74..         MOV     A,#(IgnoreDevice >> 8) & 0xff
+   \   000034   12....       LCALL   ??Subroutine7_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_11:
+   \   000037   7431         MOV     A,#0x31
+   \   000039   F0           MOVX    @DPTR,A
+     48                NeverDect((cmdMsg->msg[2])-48);//这个数组的下标应该改成int型。
+     49                break;
+   \   00003A   02....       LJMP    ??SerialCMD_3 & 0xFFFF
+     50              case IgnoreEvent_Cancel:
+     51                HalUARTWrite(0,"get event2\n",12);
+   \                     ??SerialCMD_1:
+   \   00003D                ; Setup parameters for call to function HalUARTWrite
+   \   00003D   7C0C         MOV     R4,#0xc
+   \   00003F   7D00         MOV     R5,#0x0
+   \   000041   7A..         MOV     R2,#`?<Constant "get event2\\n">` & 0xff
+   \   000043   7B..         MOV     R3,#(`?<Constant "get event2\\n">` >> 8) & 0xff
+   \   000045   12....       LCALL   ?Subroutine1 & 0xFFFF
+     52                IgnoreDevice[(cmdMsg->msg[2])-48]='0';
+   \                     ??CrossCallReturnLabel_1:
+   \   000048   F8           MOV     R0,A
+   \   000049   74..         MOV     A,#(IgnoreDevice + 208) & 0xff
+   \   00004B   28           ADD     A,R0
+   \   00004C   F582         MOV     DPL,A
+   \   00004E   74..         MOV     A,#((IgnoreDevice - 48) >> 8) & 0xff
+   \   000050   12....       LCALL   ??Subroutine7_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_12:
+   \   000053   7430         MOV     A,#0x30
+   \   000055   F0           MOVX    @DPTR,A
+     53              case NvEvent:
+     54                {
+     55                uint8 val=cmdMsg->msg[2]-48;
+   \                     ??SerialCMD_2:
+   \   000056   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   000059   A3           INC     DPTR
+   \   00005A   A3           INC     DPTR
+   \   00005B   E0           MOVX    A,@DPTR
+   \   00005C   24D0         ADD     A,#-0x30
+   \   00005E   C0E0         PUSH    A
+   \   000060   7401         MOV     A,#0x1
+   \   000062   12....       LCALL   ?XSTACK_DISP0_8
+   \   000065   D0E0         POP     A
+   \   000067   F0           MOVX    @DPTR,A
+     56                uint8 value_read;
+     57                osal_nv_item_init( 0x0202, 1, NULL );
+   \   000068                ; Setup parameters for call to function osal_nv_item_init
+   \   000068   E4           CLR     A
+   \   000069   F5..         MOV     ?V0 + 0,A
+   \   00006B   F5..         MOV     ?V0 + 1,A
+   \   00006D   78..         MOV     R0,#?V0 + 0
+   \   00006F   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000072   7C01         MOV     R4,#0x1
+   \   000074   7D00         MOV     R5,#0x0
+   \   000076   7A02         MOV     R2,#0x2
+   \   000078   7B02         MOV     R3,#0x2
+   \   00007A   12....       LCALL   ??osal_nv_item_init?relay
+   \   00007D   7402         MOV     A,#0x2
+   \   00007F   12....       LCALL   ?DEALLOC_XSTACK8
+     58                osal_nv_write( 0x0202, 0, 1, &val);
+   \   000082                ; Setup parameters for call to function osal_nv_write
+   \   000082   7401         MOV     A,#0x1
+   \   000084   12....       LCALL   ?XSTACK_DISP0_8
+   \   000087   8582..       MOV     ?V0 + 0,DPL
+   \   00008A   8583..       MOV     ?V0 + 1,DPH
+   \   00008D   78..         MOV     R0,#?V0 + 0
+   \   00008F   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000092   75..01       MOV     ?V0 + 0,#0x1
+   \   000095   75..00       MOV     ?V0 + 1,#0x0
+   \   000098   78..         MOV     R0,#?V0 + 0
+   \   00009A   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00009D   7C00         MOV     R4,#0x0
+   \   00009F   7D00         MOV     R5,#0x0
+   \   0000A1   7A02         MOV     R2,#0x2
+   \   0000A3   7B02         MOV     R3,#0x2
+   \   0000A5   12....       LCALL   ??osal_nv_write?relay
+   \   0000A8   7404         MOV     A,#0x4
+   \   0000AA   12....       LCALL   ?DEALLOC_XSTACK8
+     59                osal_nv_read( 0x0202, 0, 1,&value_read  );
+   \   0000AD                ; Setup parameters for call to function osal_nv_read
+   \   0000AD   85..82       MOV     DPL,?XSP + 0
+   \   0000B0   85..83       MOV     DPH,?XSP + 1
+   \   0000B3   8582..       MOV     ?V0 + 0,DPL
+   \   0000B6   8583..       MOV     ?V0 + 1,DPH
+   \   0000B9   78..         MOV     R0,#?V0 + 0
+   \   0000BB   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000BE   75..01       MOV     ?V0 + 0,#0x1
+   \   0000C1   75..00       MOV     ?V0 + 1,#0x0
+   \   0000C4   78..         MOV     R0,#?V0 + 0
+   \   0000C6   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000C9   7C00         MOV     R4,#0x0
+   \   0000CB   7D00         MOV     R5,#0x0
+   \   0000CD   7A02         MOV     R2,#0x2
+   \   0000CF   7B02         MOV     R3,#0x2
+   \   0000D1   12....       LCALL   ??osal_nv_read?relay
+   \   0000D4   7404         MOV     A,#0x4
+   \   0000D6   12....       LCALL   ?DEALLOC_XSTACK8
+     60                value_read+=48;
+   \   0000D9   85..82       MOV     DPL,?XSP + 0
+   \   0000DC   85..83       MOV     DPH,?XSP + 1
+   \   0000DF   E0           MOVX    A,@DPTR
+   \   0000E0   2430         ADD     A,#0x30
+   \   0000E2   F0           MOVX    @DPTR,A
+     61                HalUARTWrite(0,&(value_read),1);
+   \   0000E3                ; Setup parameters for call to function HalUARTWrite
+   \   0000E3   7C01         MOV     R4,#0x1
+   \   0000E5   7D00         MOV     R5,#0x0
+   \   0000E7   AA82         MOV     R2,DPL
+   \   0000E9   AB83         MOV     R3,DPH
+   \   0000EB   7900         MOV     R1,#0x0
+   \   0000ED   12....       LCALL   ??HalUARTWrite?relay
+     62                }
+     63            }
+     64            
+     65          }
+   \                     ??SerialCMD_3:
+   \   0000F0   7402         MOV     A,#0x2
+   \   0000F2   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000F5   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000003   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   8E82         MOV     DPL,R6
+   \   000002   8F83         MOV     DPH,R7
+   \   000004   A3           INC     DPTR
+   \   000005   A3           INC     DPTR
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   F8           MOV     R0,A
+   \   000008   A3           INC     DPTR
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   F583         MOV     DPH,A
+   \   00000C   8882         MOV     DPL,R0
+   \   00000E   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   12....       LCALL   ??HalUARTWrite?relay
+   \   000005   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   000008   A3           INC     DPTR
+   \   000009   A3           INC     DPTR
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   22           RET
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for conversion>`:
+   \   000000   30           DB 48
+   \   000001   31           DB 49
+   \   000002   32           DB 50
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for State_data>`:
+   \   000000   30           DB 48
+   \   000001   30           DB 48
+   \   000002   30           DB 48
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for IgnoreDevice>`:
+   \   000000   30           DB 48
+   \   000001   30           DB 48
+   \   000002   30           DB 48
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Absence_check?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Absence_check
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??NeverDect?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    NeverDect
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SerialCMD?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SerialCMD
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "device ">`:
+   \   000000   64657669     DB "device "
+   \            63652000
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant " is offline\\n">`:
+   \   000000   20697320     DB " is offline\012"
+   \            6F66666C
+   \            696E650A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "get event1\\n">`:
+   \   000000   67657420     DB "get event1\012"
+   \            6576656E
+   \            74310A00
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "get event2\\n">`:
+   \   000000   67657420     DB "get event2\012"
+   \            6576656E
+   \            74320A00
+
+   Maximum stack usage in bytes:
+
+     Function               ISTACK PSTACK XSTACK
+     --------               ------ ------ ------
+     Absence_check              0      0     10
+       -> HalUARTWrite          0      0     20
+       -> HalUARTWrite          0      0     20
+       -> HalUARTWrite          0      0     20
+     NeverDect                  0      0     10
+     SerialCMD                  1      0     16
+       -> HalUARTWrite          0      0     24
+       -> HalUARTWrite          0      0     24
+       -> osal_nv_item_init     0      0     28
+       -> osal_nv_write         0      0     32
+       -> osal_nv_read          0      0     32
+       -> HalUARTWrite          0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                  Bytes
+     --------------                  -----
+     f                                  2
+     conversion                         3
+     State_data                         3
+     Absence_times                      3
+     IgnoreDevice                       3
+     Absence_check                    126
+     ?Subroutine0                       5
+     ?Subroutine2                      13
+     ?Subroutine3                      12
+     ?Subroutine5                       4
+     ??Subroutine7_0                    5
+     NeverDect                         15
+     SerialCMD                        248
+     ?Subroutine4                       4
+     ?Subroutine6                      15
+     ?Subroutine1                      12
+     ?<Initializer for conversion>      3
+     ?<Initializer for State_data>      3
+     ?<Initializer for IgnoreDevice>    3
+     ??Absence_check?relay              6
+     ??NeverDect?relay                  6
+     ??SerialCMD?relay                  6
+     ?<Constant "device ">              8
+     ?<Constant " is offline\n">       13
+     ?<Constant "get event1\n">        12
+     ?<Constant "get event2\n">        12
+
+ 
+ 459 bytes in segment BANKED_CODE
+  18 bytes in segment BANK_RELAYS
+   9 bytes in segment XDATA_I
+   9 bytes in segment XDATA_ID
+  45 bytes in segment XDATA_ROM_C
+   5 bytes in segment XDATA_Z
+ 
+ 486 bytes of CODE  memory
+  45 bytes of CONST memory
+  14 bytes of XDATA memory
+
+Errors: none
+Warnings: none
